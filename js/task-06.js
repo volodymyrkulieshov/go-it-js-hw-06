@@ -1,7 +1,7 @@
 const input = document.querySelector("#validation-input");
 console.dir(input);
-input.addEventListener("blur", onBlur);
-function onBlur(evt) {
+input.addEventListener("blur", handlerBlur);
+function handlerBlur(evt) {
   if (
     evt.currentTarget.value.length === Number(evt.currentTarget.dataset.length)
   ) {

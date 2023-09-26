@@ -12,13 +12,18 @@ function getRandomHexColor() {
 //   spanEl.innerHTML = bkgColor;
 // });
 
-const btnChangeEl = document.querySelector(".change-color");
-const backgroundColorEL = document.querySelector(".color");
+// const btnChangeEl = document.querySelector(".change-color");
+// const backgroundColorEL = document.querySelector(".color");
 
-btnChangeEl.addEventListener("click", onClick);
+const elements = {
+  button: document.querySelector(".change-color"),
+  backgroundColor: document.querySelector(".color"),
+};
 
-function onClick() {
+elements.button.addEventListener("click", handlerClick);
+
+function handlerClick() {
   const changeBgColor = (document.body.style.backgroundColor =
     getRandomHexColor());
-  backgroundColorEL.innerHTML = changeBgColor;
+  elements.backgroundColor.innerHTML = changeBgColor;
 }

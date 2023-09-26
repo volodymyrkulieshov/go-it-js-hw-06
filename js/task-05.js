@@ -1,13 +1,13 @@
-const nameImput = document.querySelector("#name-input");
-console.dir(nameImput);
+const nameInput = document.querySelector("#name-input");
+console.dir(nameInput);
 const nameOutput = document.querySelector("#name-output");
 console.dir(nameOutput);
 
-nameImput.addEventListener("input", inputChange);
+nameInput.addEventListener("input", handlerInput);
 
-function inputChange() {
-  nameOutput.textContent = nameImput.value;
-  if (!nameImput === "") {
-    nameImput = nameOutput;
+function handlerInput() {
+  nameOutput.textContent = nameInput.value;
+  if (!nameInput === "") {
+    nameInput = nameOutput;
   }
 }
