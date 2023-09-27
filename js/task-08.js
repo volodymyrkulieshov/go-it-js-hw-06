@@ -7,10 +7,12 @@ function handlerSubmit(evt) {
   const FormElem = evt.currentTarget.elements;
   const email = FormElem.email.value;
   const password = FormElem.password.value;
+  const formObj = { email, password };
   if (email === "" || password === "") {
     alert("Введіть дані");
     return;
   } else {
+    console.log(formObj);
     return loginForm.reset();
   }
 }
